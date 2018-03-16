@@ -11,3 +11,5 @@ if (Test-Path $funcsDir)
 function which($name) { Get-Command $name | select Definition }
 function rm-rf($item) { Remove-Item -Recurse -Force $item }
 function touch($file) { New-Item -ItemType File $file }
+
+Import-Module (Join-Path $PSScriptRoot posh-git\src\posh-git.psd1)
